@@ -8,16 +8,18 @@ public class Cliente {
 	String apellido;
 	int dni;
 	Portal p;
+	private List<Reserva> misReservas ;
 
 	public Cliente(String elNombre, String elApellido,int elDni,Portal elP){
 		this.nombre = elNombre;
 		this.apellido = elApellido;
 		this.dni = elDni;
 		this.p = elP;
+		this.misReservas= new ArrayList<Reservas>();
 	}
 	
 	public ArrayList<Reserva> verMisReservas(){
-		return getP().getListaDeReservas();
+		return this.getMisReseravas();
 	}
 
 	public String getNombre() {
@@ -63,6 +65,7 @@ public class Cliente {
 	}
 	
 	public ArrayList<Reserva> obtenerReservasRealizadasEn(String pais){
+		
 		ArrayList<Reserva> aRetornar = new ArrayList<Reserva>();
 		for(Reserva r : this.verMisReservas()){
 			if(r.getLugar().equals(pais)){

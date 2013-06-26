@@ -54,7 +54,7 @@ public class Cliente {
 
         public ArrayList<Reserva> obtenerMisReservas(){
 	 ArrayList<Reserva> ls = new ArrayList<Reserva>(); 
-         for(Reserva r : this.portal().getReservas()){
+         for(Reserva r : this.portal.getReservas()){
             if(r.getCliente() == this){
               ls.add(r);
 	    }
