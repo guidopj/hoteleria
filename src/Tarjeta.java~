@@ -30,9 +30,5 @@ public class Tarjeta {
 	public void setFormaDePago(FormaDePago formaDePago) {
 		this.formaDePago = formaDePago;
 	}
-
-	public void realizarPago(){
-	  this.getFormaDePago().efectuarPago(this);
-	}
 	
 }

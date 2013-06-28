@@ -2,7 +2,7 @@ package modelo;
 
 public class Credito extends FormaDePago{
 	
-	public void descontarMontoTarjeta(Tarjeta t, float montoAGastar, int cuotas){
+	public void descontarEnTarjeta(Tarjeta t, float montoAGastar, int cuotas){
 		 t.setMontoDisponible(t.getMontoDisponible() - (montoAGastar / cuotas));
 	}
 
